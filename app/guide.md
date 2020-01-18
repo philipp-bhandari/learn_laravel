@@ -1,5 +1,7 @@
 ### Insert Date String extension ctrl + shift + i <hr>
 ### sudo code /home/feelsever/laravelapp/ --user-data-dir /home/feelsever/ <hr>
+### #TODO - флаг что не изучил до конца.
+<hr><hr><hr>
 
 # Day 1 ----------------------------------------
 _2020-01-15 23:30:54_
@@ -175,3 +177,44 @@ return $this->belongsToMany('App\Role')->withPivot('column1', 'column2');
 <pre>
 return $this->belongsToMany('App\Role')->withTimestamps();
 </pre>
+
+# Day 3 ----------------------------------------
+
+_2020-01-18 18:38:03_
+
+Присутствуют еще связь "Ко многим через" и "Полиморфные отношения", рассматривать пока не буду. #TODO - https://laravel.ru/docs/v5/eloquent-relationships#hmt
+
+
+
+## Продолжаю выполнять основной гайд
+
+Мы определим функцию tasks в модели User, которая вызывает Eloquent-метод hasMany.
+<pre>
+public function tasks()
+  {
+    return $this->hasMany(Task::class);
+  }
+</pre>
+
+## Аутентификация
+
+app/Http/Controllers/Auth/AuthController уже включён в приложение Laravel. Этот контроллер использует специальный типаж (trait) AuthenticatesAndRegistersUsers со всей необходимой логикой для создания и аутентификации пользователей
+
+Нам нужно создать шаблоны регистрации и входа в систему, а также определить маршруты, указывающие на контроллер аутентификации.
+
+ Мы можем сделать это с помощью Artisan-команды make:auth: 
+
+<pre>
+php artisan make:auth
+</pre>
+
+> Уточнение для laravel 6+:
+>> В Laravel 6+ команда make:auth больше не существует.
+>> Необходимо установить laravel/ui модуль через Composer:
+>> <pre>
+>> composer require laravel/ui
+>>    и использовать
+>> php artisan ui:auth
+
+>> https://stackoverflow.com/questions/34545641/php-artisan-makeauth-command-is-not-defined
+>></pre>
