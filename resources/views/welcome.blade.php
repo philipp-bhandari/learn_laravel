@@ -62,6 +62,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="{{asset('js/feel.js')}}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -83,7 +84,7 @@
                 <div class="title m-b-md">
                     Превед!
                 </div>
-
+ 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
