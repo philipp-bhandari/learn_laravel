@@ -228,10 +228,29 @@ _2020-01-19 16:44:43_
 Проблема была решена с помощью npm: 
 <pre>
 #TODO: понять почему
-
 npm run dev
 </pre>
 
 _2020-01-19 18:21:03_
 
 #WHATWASDO: пришёл ssl-ключ для домена. Настроил ssl и переадресацию на https
+
+# Day 5 ----------------------------------------
+
+_2020-01-21 22:29:59_
+
+Поскольку мы знаем, что нам нужно получать и сохранять задачи, давайте создадим TaskController с помощью командной строки Artisan, при этом новый контроллер будет помещён в папку app/Http/Controllers: 
+
+<pre>
+php artisan make:controller TaskController
+</pre>
+
+Теперь, когда контроллер создан, давайте создадим стабы для некоторых маршрутов в нашем файле app/Http/routes.php, указывающих на контроллер: 
+
+<pre>
+Route::get('/tasks', 'TaskController@index');
+Route::post('/task', 'TaskController@store');
+Route::delete('/task/{task}', 'TaskController@destroy');
+</pre>
+
+_2020-01-21 23:10:29_

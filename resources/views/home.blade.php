@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Vue JS</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
- 
-                    You are logged in!
+                    <h2>Let's use Vue.JS</h2>
+
+                    <div id="app">
+
+                        <div class="card mt-4">
+                            <div class="py-4 card-body">
+                                <first-component></first-component>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
