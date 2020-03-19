@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Symfony\Component\DomCrawler\Crawler;
 
 class TaskController extends Controller
 {
@@ -12,6 +13,8 @@ class TaskController extends Controller
 
     public function index()
     {
-        return view('home');
+        return view('home', [
+
+        ]);
     }
 }

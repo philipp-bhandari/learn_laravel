@@ -20,7 +20,7 @@
         <script></script>
     </head>
     <body class="text-center">
-        <div id="app">
+        <!-- <div id="app">
             <div
                 class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"
             >
@@ -55,8 +55,7 @@
                     <div class="inner"></div>
                 </footer>
             </div>
-        </div>
-
+        </div> -->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script
@@ -77,7 +76,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
-        <script>
+        <!-- <script>
             var webstore = new Vue({
                 el: "#app",
                 data: {
@@ -90,6 +89,17 @@
                         image:
                             "/assets/purina-pro-plan-dog-adult-small-amp-mini-sensitive-skin-optiderma-korm-dla-vzroslyh-sobak-melkih-i-karlikovyh-porod-s-cuvstvitelnoj-kozej-800x533.png"
                     }
+                }
+            });
+        </script> -->
+        <div id="app">
+            <h1>Hello {{name}} !</h1>
+        </div>
+        <script>
+            new Vue({
+                el: "#app",
+                data: {
+                    name: "Vue"
                 }
             });
         </script>
